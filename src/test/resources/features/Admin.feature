@@ -1,9 +1,11 @@
 Feature: Login and Admin verification feature
+
+
   Background: Login
   Scenario Outline:
     Given I am in the Login page
     When enter "<username>" in the input box
-    And enter "<password>" in the input box
+    And enter "<password>" in the input
     And click on the Login button
     Then verify that i am logged in
     Examples:
