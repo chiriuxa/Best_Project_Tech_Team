@@ -32,7 +32,7 @@ public class Admin_page {
     public WebElement confirmPassword;
 
 
-    @FindBy(xpath = "input[id=\"btnSave\"]")
+    @FindBy(xpath = "//p/input[@value=\"Save\"]")
     public WebElement saveBtn;
 
     @FindBy(id = "searchSystemUser_userName")
@@ -41,13 +41,13 @@ public class Admin_page {
     @FindBy(id = "searchBtn")
     public WebElement searchBtn;
 
-    @FindBy(id = "ohrmList_chkSelectRecord_41")
+    @FindBy(id = "ohrmList_chkSelectAll")
     public WebElement checkBox;
 
     @FindBy(id = "btnDelete")
     public WebElement deleteBtn;
 
-    @FindBy(id = " dialogDeleteBtn")
+    @FindBy(xpath = "//div[@id=\"deleteConfModal\"]/div/input[@id=\"dialogDeleteBtn\"]")
     public WebElement okBtn;
 
     @FindBy(css = "div>form>script[type=\"text/javascript\"]")

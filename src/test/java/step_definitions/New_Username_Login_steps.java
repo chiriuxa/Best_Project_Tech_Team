@@ -16,18 +16,21 @@ public class New_Username_Login_steps {
 
     Login_HomeBase_page login_homeBase_page = new Login_HomeBase_page();
     Welcome_page welcome_page = new Welcome_page();
-    Select select = new Select(Driver.getDriver().findElement(By.id("welcome")));
+
 
     @Given("i click on Welcome Paul dropdown")
     public void i_click_on_welcome_paul_dropdown() {
       // Driver.getDriver().navigate().refresh();
+        welcome_page.welcomeAdmin.click();
 
 
     }
 
     @When("i select Logout link")
     public void i_select_logout_link() {
-        select.selectByIndex(2);
+      //  Select select = new Select(welcome_page.welcomeAdmin);
+       // select.selectByIndex(2);
+        welcome_page.logOut.click();
 
     }
 

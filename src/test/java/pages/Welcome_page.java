@@ -12,7 +12,13 @@ public class Welcome_page {
     }
 
 
-    @FindBy(id = "welcome")
+    @FindBy(xpath = "(//div[@id=\"branding\"]/a)[2]")
     public WebElement welcomeAdmin;
+
+
+    @FindBy(xpath = "(//div[@id=\"welcome-menu\"]/ul/li/a)[3]")
+    public WebElement logOut;
+
+
 
 }

@@ -28,7 +28,7 @@ public class Driver {
                 }
             }
 
-            driver.manage().window().maximize();
+            driver.manage().window().fullscreen();
             driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
         }

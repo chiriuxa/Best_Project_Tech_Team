@@ -52,9 +52,9 @@ public class Find_userName_andDeleteIt_steps {
 
     @Then("i should see verification message")
     public void i_should_see_verification_message() {
-        String actual = admin_page.verifyDltMsg.getAttribute("type");
-        String expected = "uccessfully Deleted";
-        Assert.assertTrue(actual.contains(expected));
+       boolean actual = admin_page.inputUserName.isDisplayed();
+        String expected = "successfully Deleted";
+        Assert.assertTrue(actual);
 
 
     }

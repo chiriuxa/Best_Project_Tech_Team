@@ -46,30 +46,9 @@ Background: login
 
 
 
-#          Scenario: find element by name and delete it
-#            Given i click on PIM link header
-#            When write the name of employee
-#            And i click on Search button
-#            And i should see the name on the search list
-#            And i select the check box for the name
-#            And i click on the delete button
-#            And i click on ok button
-#            Then i should verify delete message
-
-
-
             Scenario: find element by Id
               Given i click on PIM header link
               When i write an id on the ID input box
               And i click on the search button
               And i should see element appeared on the search list
 
-
-##
-##
-##
-##
-##
-##
-##
-##

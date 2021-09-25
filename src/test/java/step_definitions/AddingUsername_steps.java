@@ -82,6 +82,7 @@ public class AddingUsername_steps {
     @Then("i should verify newUserAdmin in the list")
     public void i_should_verify_new_user_admin_in_the_list() {
 
+        wait.until(ExpectedConditions.visibilityOf(admin_page.inputUserName));
 
         String actual = Driver.getDriver().getCurrentUrl();
         String expected = "Users";
