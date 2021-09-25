@@ -32,4 +32,7 @@ public class Time_Menu_Punch_InOut_Pages {
     @FindBy(xpath = "//*[@id='punchTimeForm']/fieldset/p")
     public WebElement getPunchInOutButtonText;
 
+    @FindBy(xpath = "//*[@id = 'punchTimeForm']/fieldset/ol/li[2]/label[2]")
+    public WebElement noteText;
+
 }

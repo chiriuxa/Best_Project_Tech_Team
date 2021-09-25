@@ -1,5 +1,6 @@
 package step_definitions;
 
+import Utilities.Config;
 import Utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
@@ -40,12 +41,29 @@ public class Time_Menu_Punch_InOut_Steps {
 
     @When("Adding a note")
     public void adding_a_note() {
-        time_menu_punch_inOut_pages.punchInNoteTextArea.sendKeys("I'm in");
+        time_menu_punch_inOut_pages.punchInNoteTextArea.sendKeys(Config.getProperty("punchInNoteText"));
 
     }
 
     @When("Click on In button")
     public void click_on_in_button() {
+        time_menu_punch_inOut_pages.punchInOutButton.click();
+
+    }
+
+    @When("Check if note is displayed")
+    public void check_if_note_is_displayed() {
+        Assert.assertTrue(time_menu_punch_inOut_pages.noteText.getText().contains(Config.getProperty("punchInNoteText")));
+
+    }
+
+    @When("Check if Punch Out Text is displayed")
+    public void check_if_punch_out_text_is_displayed() {
+        Assert.assertEquals("Punch Out",time_menu_punch_inOut_pages.punchInText.getText());
+    }
+
+    @When("Click on Out button")
+    public void click_on_out_button() {
         time_menu_punch_inOut_pages.punchInOutButton.click();
 
     }

@@ -2,6 +2,7 @@
 Feature: Time And Recruitment feature
 
 
+
   Background: Login
   Scenario: Singin to Orange HRM Web Page
     Given I am in the Login page
@@ -19,5 +20,9 @@ Feature: Time And Recruitment feature
       And Verifying Punch In text Is displayed
       And Adding a note
       And Click on In button
+      And Check if note is displayed
+      Then Check if Punch Out Text is displayed
+      And Click on Out button
+
 
 
