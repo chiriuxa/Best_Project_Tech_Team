@@ -19,20 +19,20 @@ public class Login_HomeBase_steps {
 
     }
 
-    @When("enter {string} in the input box")
-    public void enter_in_the_input_box(String string) {
-        login_homeBase_page.username.sendKeys(string);
+    @When("enter username in the input box")
+    public void enter_username_in_the_input_box() {
+        login_homeBase_page.username.sendKeys(Config.getProperty("userName"));
 
     }
-    @When("enter {string} in the input")
-    public void enter_in_the_input(String string) {
-        login_homeBase_page.password.sendKeys(string);
+    @When("enter password in the input")
+    public void enter_password_in_the_input() {
+        login_homeBase_page.password.sendKeys(Config.getProperty("password"));
     }
 
 
     @When("click on the Login button")
     public void click_on_the_login_button() {
-        login_homeBase_page.password.click();
+        login_homeBase_page.loginBtn.click();
 
     }
 

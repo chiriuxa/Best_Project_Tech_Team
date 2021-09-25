@@ -1,17 +1,19 @@
+
+@orange
 Feature: Login and Admin verification feature
 
 
-  Background: Login
-  Scenario Outline:
-    Given I am in the Login page
-    When enter "<username>" in the input box
-    And enter "<password>" in the input
-    And click on the Login button
-    Then verify that i am logged in
-    Examples:
-      |username| |password|
-      |Admin| |admin123|
+Background: login
+     Given I am in the Login page
+     When enter username in the input box
+     And enter password in the input
+     And click on the Login button
+     Then verify that i am logged in
 
+
+
+
+    @addUser
     Scenario: adding username
       Given i click on Admin Header link
       When i click on the Add button
@@ -44,15 +46,15 @@ Feature: Login and Admin verification feature
 
 
 
-          Scenario: find element by name and delete it
-            Given i click on PIM link header
-            When write the name of employee
-            And i click on Search button
-            And i should see the name on the search list
-            And i select the check box for the name
-            And i click on the delete button
-            And i click on ok button
-            Then i should verify delete message
+#          Scenario: find element by name and delete it
+#            Given i click on PIM link header
+#            When write the name of employee
+#            And i click on Search button
+#            And i should see the name on the search list
+#            And i select the check box for the name
+#            And i click on the delete button
+#            And i click on ok button
+#            Then i should verify delete message
 
 
 
@@ -61,14 +63,13 @@ Feature: Login and Admin verification feature
               When i write an id on the ID input box
               And i click on the search button
               And i should see element appeared on the search list
-              And i click on the Reset button
-              Then i should see all employee list
 
 
-
-
-
-
-
-
-
+##
+##
+##
+##
+##
+##
+##
+##
