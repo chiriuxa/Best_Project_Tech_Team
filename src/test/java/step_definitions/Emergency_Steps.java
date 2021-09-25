@@ -16,10 +16,10 @@ public class Emergency_Steps {
     MyInfo_Page myInfo1 = new MyInfo_Page();
     Faker faker = new Faker();
 
-  // @Given("I am in the main page")
-  //  public void i_am_in_the_main_page() {
-   // Driver.getDriver().get(Config.getProperty("OrangehrmUrl"));
- // }
+    @Given("I am in the main page")
+   public void i_am_in_the_main_page() {
+   Driver.getDriver().get(Config.getProperty("OrangehrmUrl"));
+ }
 
 
 
@@ -53,17 +53,17 @@ public class Emergency_Steps {
 
     @When("I navigate back and click Home Telepone")
     public void i_navigate_back_and_click_home_telepone() {
-       emergency_page.HomeTelephone.sendKeys(faker.phoneNumber().cellPhone());
+       emergency_page.HomeTelephone.sendKeys("3127775599");
     }
 
     @When("I navigate back and enter Mobile")
     public void i_navigate_back_and_enter_mobile() {
-        emergency_page.MobileNumber.sendKeys(faker.phoneNumber().cellPhone());
+        emergency_page.MobileNumber.sendKeys(" 8602021293");
     }
 
     @When("I navigate back and enter Work Telephone")
     public void i_navigate_back_and_enter_work_telephone() {
-       emergency_page.WorkTelephoneNum.sendKeys(faker.phoneNumber().phoneNumber());
+       emergency_page.WorkTelephoneNum.sendKeys("3128990911");
     }
 
     @Then("Press the save button")

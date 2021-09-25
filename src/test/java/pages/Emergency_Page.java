@@ -26,13 +26,13 @@ public class Emergency_Page {
     @FindBy(id = "emgcontacts_relationship")
     public WebElement Relationship;
 
-    @FindBy(xpath ="//input[contains(@id ='emgcontacts_homePhone')]")
+    @FindBy(xpath ="//*[@id='emgcontacts_homePhone']")
     public WebElement HomeTelephone;
 
-    @FindBy(id = "emgcontacts_mobilePhone")
+    @FindBy(xpath = "//*[@id='emgcontacts_mobilePhone']")
     public WebElement MobileNumber;
 
-    @FindBy(id = "emgcontacts_workPhone")
+    @FindBy(xpath = "//*[@id='emgcontacts_workPhone']")
     public WebElement WorkTelephoneNum;
 
     @FindBy(id = "btnSaveEContact")
